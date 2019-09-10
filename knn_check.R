@@ -1,6 +1,5 @@
-setwd("~/Documents/MattesonResearch/AppliedBioPhysics/Paper2017")
-load("datasets/gel_data.Rdata")
-source("code/revisions-2/ECISfunctions.R")
+load("gel_data.Rdata")
+source("ECISfunctions.R")
 library(e1071) # for "tune.knn"
 library(class) # for "knn"
 
@@ -101,7 +100,4 @@ pair_knn # KNN-CV: 0.934 (compared to Tree: 0.930, LDA: 0.944, QDA: 0.951, RDA: 
 trio_knn <- knn_check(r2h, mr, eof, rb, a, freqs, cells, n_trials, n_feats = 3)
 trio_knn # KNN-CV: 0.982 (compared to Tree: 0.970, LDA: 0.981, QDA: 0.978, RDA: 0.992)
 
-knn_check <- list(single_knn = single_knn, pair_knn = pair_knn, trio_knn = trio_knn)
-
-save(knn_check, file = "/Users/megangelsinger/Documents/MattesonResearch/AppliedBioPhysics/Paper2017/InternationalJournalOfBiostatistics/Round_2_Minor_Revisions/figs_tables/knn_check.Rdata")
  
