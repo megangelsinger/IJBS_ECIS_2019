@@ -12,15 +12,11 @@ library(parallel) # for 'mclapply'
 
 # 9.5 hours to run
 results_gel <- mainAnalysis(gel.data)
-save(results_gel, file = "/Users/megangelsinger/Documents/MattesonResearch/AppliedBioPhysics/Paper2017/InternationalJournalOfBiostatistics/Round_2_Minor_Revisions/figs_tables/results_gel_newr2h.Rdata")
 
 # 9.75 hours to run
 results_bsa <- mainAnalysis(bsa.data)
-save(results_bsa, file = "/Users/megangelsinger/Documents/MattesonResearch/AppliedBioPhysics/Paper2017/InternationalJournalOfBiostatistics/Round_2_Minor_Revisions/figs_tables/results_bsa_newr2h.Rdata")
 
 ########################## Figures - Main Paper ##############################
-setwd("/Users/megangelsinger/Documents/MattesonResearch/AppliedBioPhysics/Paper2017/InternationalJournalOfBiostatistics/Round_2_Minor_Revisions/figs_tables")
-
 ## To apply par() settings within .eps:
 ##    1. Set par() settings in postscript embedding procedure
 ##    2. (ME) Create plots outside of postscript and then call them again inside to save
@@ -277,7 +273,7 @@ print(xtable(table6_s, type = "latex", digits = 3, align = c("c", "C{2cm}", "C{6
 ##    2. (ME) Create plots outside of postscript and then call them again inside to save
 library(cowplot) # for 'plot_grid'
 library(gridGraphics) # for 'plot_grid' functionality with regular plots
-library(whitening) # for 'whiten' to decorrelate variables
+# library(whitening) # for 'whiten' to decorrelate variables
 
 ## Supplemental Figure 1 ##
 dev.off()
