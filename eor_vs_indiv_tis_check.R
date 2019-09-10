@@ -147,10 +147,6 @@ pair_wtis$best_feats # compared to Tree: same, LDA: same, QDA: 0.001 better (did
 trio_wtis <- check_tis(r2h, mr, ti60, ti61, ti62, ti63, ti64, rb, a, freqs, cells, n_trials, n_feats = 3)
 trio_wtis$best_feats # compared to Tree: same, LDA: 0.001 better, QDA: same (didn't do RDA, too long)
 
-eor_wtis_check <- list(single_wtis = single_wtis, pair_wtis = pair_wtis, trio_wtis = trio_wtis)
-
-save(eor_wtis_check, file = "/Users/megangelsinger/Documents/MattesonResearch/AppliedBioPhysics/Paper2017/InternationalJournalOfBiostatistics/Round_2_Minor_Revisions/figs_tables/eor_wtis_check.Rdata")
-
 
 ################################## Check with just new features ###############################
 check_tis_just_tis <- function(ti60, ti61, ti62, ti63, ti64, freqs, cells, n_trials, n_feats){
@@ -272,7 +268,4 @@ pair_wtis_just_tis$best_feats # compared to Tree: .07 worse, LDA: .042 worse, QD
 trio_wtis_just_tis <- check_tis_just_tis(ti60, ti61, ti62, ti63, ti64, freqs, cells, n_trials, n_feats = 3)
 trio_wtis_just_tis$best_feats # compared to Tree: .11 worse, LDA: .063 worse, QDA: .028 worse (didn't do RDA, too long)
 
-eor_wtis_just_tis_check <- list(single_wtis_just_tis = single_wtis_just_tis, pair_wtis_just_tis = pair_wtis_just_tis, trio_wtis_just_tis = trio_wtis_just_tis)
-
-save(eor_wtis_just_tis_check, file = "/Users/megangelsinger/Documents/MattesonResearch/AppliedBioPhysics/Paper2017/InternationalJournalOfBiostatistics/Round_2_Minor_Revisions/figs_tables/eor_wtis_just_tis_check.Rdata")
 
